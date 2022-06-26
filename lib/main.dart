@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:surf_lint_rules/surf_lint_rules.dart';
 
 // ! gives an error
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Places'),
+      // home: const MyHomePage(title: 'Places'),
+
+      home: const SightListScreen(),
     );
   }
 }
