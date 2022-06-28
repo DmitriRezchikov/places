@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
@@ -16,16 +14,12 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('Sight List Screen')),
-
-      // body: Center(
-      //   child: Text("Hello!"),
-      // ),
-
+      appBar: AppBar(
+        title: const Text('Sight List Screen'),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        // ignore: prefer_const_literals_to_create_immutables
-        children: <Widget>[
+        children: const <Widget>[
           Text("Hello!"),
           TextField(
             decoration: InputDecoration(
