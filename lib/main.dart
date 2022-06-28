@@ -1,18 +1,5 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
-import 'package:surf_lint_rules/surf_lint_rules.dart';
-
-// ! gives an error
-// import 'package:dart_code_metrics/analyzer_plugin.dart';
-// import 'package:dart_code_metrics/config.dart';
-// import 'package:dart_code_metrics/lint_analyzer.dart';
-// import 'package:dart_code_metrics/reporters.dart';
-// import 'package:dart_code_metrics/unused_code_analyzer.dart';
-// import 'package:dart_code_metrics/unused_files_analyzer.dart';
-// import 'package:dart_code_metrics/unused_l10n_analyzer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,14 +32,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // int _counter = 0;
-
-  // void _incrementCounter() {
-  //   setState(() {
-  //     _counter++;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,22 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
+          children: const <Widget>[
+            Text(
               'Places home page',
             ),
-            // Text(
-            //   '$_counter',
-            //   style: Theme.of(context).textTheme.headline4,
-            // ),
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
