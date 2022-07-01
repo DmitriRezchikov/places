@@ -1,3 +1,4 @@
+import 'package:places/ui/screen/sight_card.dart';
 import 'domain/sight.dart';
 
 final List<Sight> mocks = [

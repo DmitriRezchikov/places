@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:places/ui/screen/sight_card.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
 
 void main() {
@@ -15,8 +16,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Places'),
-
       home: const SightListScreen(),
     );
   }
