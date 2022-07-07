@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../mocks.dart';
 
 // карточка с КРАТКОЙ информацией о месте
@@ -49,11 +50,17 @@ class SightCard extends StatelessWidget {
                       ),
                       Positioned(
                         top: 10,
-                        right: 20,
-                        child: Container(
-                          width: 20,
+                        right: 10,
+                        child: SizedBox(
                           height: 20,
-                          color: Colors.red,
+                          width: 20,
+                          child: Container(
+                            width: 20,
+                            height: 20,
+                            child: SvgPicture.asset(
+                              'res/icons/heart_icon.svg',
+                            ),
+                          ),
                         ),
                       ),
                     ],

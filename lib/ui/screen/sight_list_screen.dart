@@ -36,9 +36,9 @@ class _SightListScreenState extends State<SightListScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: const <Widget>[
-            SightCard(cardNumber: 0),
-            SightCard(cardNumber: 1),
-            SightCard(cardNumber: 2),
+            SightCard(cardNumber: 3),
+            SightCard(cardNumber: 4),
+            SightCard(cardNumber: 5),
           ],
         ),
       ),

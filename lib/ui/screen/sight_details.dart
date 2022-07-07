@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:places/domain/sight.dart';
 import '../../mocks.dart';
 
 import '/ui/res/constants.dart';
 // карточка с ПОДРОБНОЙ информацией о месте
 
 class SightDetails extends StatelessWidget {
-  SightDetails({Key? key, required this.sightID}) : super(key: key);
+// Sight sight;
+
+  SightDetails({Key? key, required Sight sight}) : super(key: key);
 
 // TODO: потом поменять на переменную
-  int sightID = 1;
+  // int sightID = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +38,9 @@ class SightDetails extends StatelessWidget {
                 child: SizedBox(
                   height: 20,
                   width: 20,
-                  child: SvgPicture.asset(
-                    "res/icons/heart_icon.svg",
+                  child: Container(
+                    width: 20,
+                    height: 20,
                     color: Colors.red,
                   ),
                   // child: SvgPicture.asset(favorite),
