@@ -2,8 +2,46 @@
 
 import 'package:flutter/material.dart';
 import 'package:places/ui/screen/sight_card.dart';
+import '../../mocks.dart';
 
 import '/ui/res/constants.dart';
+
+// TODO: do we need a separate class for this?
+class ListOfCardsWidget extends StatelessWidget {
+  const ListOfCardsWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> cardList = [];
+
+    for (var i = 0; i < mocks.length; i++) {
+      // var currentElement = mocks[i].name;
+      // print(currentElement);
+
+      cardList.add(SightCard(cardNumber: i));
+    }
+
+    print(cardList);
+
+    var thisWidget = SightCard(cardNumber: 0);
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: const <Widget>[
+        // cardList,
+
+        SightCard(cardNumber: 0),
+        SightCard(cardNumber: 1),
+        SightCard(cardNumber: 2),
+        SightCard(cardNumber: 3),
+        SightCard(cardNumber: 4),
+        SightCard(cardNumber: 5),
+
+        //   // cardList,
+      ],
+    );
+  }
+}
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
@@ -15,6 +53,8 @@ class SightListScreen extends StatefulWidget {
 class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
+    // listOfCardWidgets
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -33,13 +73,20 @@ class _SightListScreenState extends State<SightListScreen> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
-            SightCard(cardNumber: 3),
-            SightCard(cardNumber: 4),
-            SightCard(cardNumber: 5),
-          ],
+        child: SingleChildScrollView(
+          child: ListOfCardsWidget(),
+          // child: Column(
+          //   mainAxisAlignment: MainAxisAlignment.start,
+          //   children: const <Widget>[
+          //     // SightCard(cardNumber: 0),
+          //     // SightCard(cardNumber: 1),
+          //     // SightCard(cardNumber: 2),
+          //     // SightCard(cardNumber: 3),
+          //     // SightCard(cardNumber: 4),
+          //     // SightCard(cardNumber: 5),
+
+          //   ],
+          // ),
         ),
       ),
     );
