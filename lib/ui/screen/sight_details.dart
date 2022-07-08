@@ -14,8 +14,7 @@ class SightDetails extends StatelessWidget {
 
   SightDetails({Key? key, required Sight sight}) : super(key: key);
 
-// TODO: потом поменять на переменную
-  // int sightID = 1;
+// ! я не очень понимаю TODO: потом поменять на переменную
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,6 @@ class SightDetails extends StatelessWidget {
                     height: 20,
                     color: Colors.red,
                   ),
-                  // child: SvgPicture.asset(favorite),
                 ),
               ),
             ]),
