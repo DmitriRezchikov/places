@@ -6,38 +6,27 @@ import '../../mocks.dart';
 
 import '/ui/res/constants.dart';
 
-// TODO: do we need a separate class for this?
 class ListOfCardsWidget extends StatelessWidget {
   const ListOfCardsWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> cardList = [];
-
-    for (var i = 0; i < mocks.length; i++) {
-      // var currentElement = mocks[i].name;
-      // print(currentElement);
-
-      cardList.add(SightCard(cardNumber: i));
-    }
-
-    print(cardList);
-
-    var thisWidget = SightCard(cardNumber: 0);
+// ! Кино посмотрел.  У меня не получается.
+// ! Вот это не работает когда я пытаюсь cardList показать внутри Column
+    // List<Widget> cardList = [];
+    // for (var i = 0; i < mocks.length; i++) {
+    //   cardList.add(SightCard(cardNumber: i));
+    // }
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: const <Widget>[
-        // cardList,
-
         SightCard(cardNumber: 0),
         SightCard(cardNumber: 1),
         SightCard(cardNumber: 2),
         SightCard(cardNumber: 3),
         SightCard(cardNumber: 4),
         SightCard(cardNumber: 5),
-
-        //   // cardList,
       ],
     );
   }
