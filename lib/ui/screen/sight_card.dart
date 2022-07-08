@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../mocks.dart';
+import '/ui/res/constants.dart';
 
 // карточка с КРАТКОЙ информацией о месте
 
@@ -42,7 +43,6 @@ class SightCard extends StatelessWidget {
                           mocks[cardNumber].type,
                           style: const TextStyle(
                             fontSize: 13.0,
-                            // fontFamily: 'Roboto',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -54,11 +54,11 @@ class SightCard extends StatelessWidget {
                         child: SizedBox(
                           height: 20,
                           width: 20,
-                          child: Container(
+                          child: SizedBox(
                             width: 20,
                             height: 20,
                             child: SvgPicture.asset(
-                              'res/icons/heart_icon.svg',
+                              AppAssets.favorite,
                             ),
                           ),
                         ),
@@ -78,7 +78,6 @@ class SightCard extends StatelessWidget {
                           mocks[cardNumber].name,
                           style: const TextStyle(
                             fontSize: 15.0,
-                            // fontFamily: 'Roboto',
                             color: Colors.black87,
                             fontWeight: FontWeight.bold,
                           ),
@@ -91,9 +90,7 @@ class SightCard extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: 12.0,
-                            // fontFamily: 'Roboto',
                             color: Colors.black54,
-                            // fontWeight: FontWeight.bold,
                           ),
                         )
                       ],

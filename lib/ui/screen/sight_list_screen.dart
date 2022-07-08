@@ -64,12 +64,8 @@ class _SightListScreenState extends State<SightListScreen> {
         elevation: 0.0,
 
         title: Text(
-          "Список\nИнтересных мест",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
-          ),
+          AppStrings.appTitle,
+          style: AppTypography.textAppTitleStyle,
         ),
       ),
       body: Center(

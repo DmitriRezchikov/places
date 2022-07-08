@@ -9,7 +9,7 @@
 import 'package:flutter/material.dart';
 
 class AppStrings {
-  static const appTitle = 'Это тайтл';
+  static const appTitle = 'Список\nИнтересных мест';
 }
 
 class AppAssets {
@@ -21,6 +21,12 @@ class AppTypography {
     fontSize: 16.0,
     height: 1.25,
     fontWeight: FontWeight.w400,
+  );
+
+  static const textAppTitleStyle = TextStyle(
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 30,
   );
 }
 
