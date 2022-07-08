@@ -10,16 +10,12 @@ import '/ui/res/constants.dart';
 // карточка с ПОДРОБНОЙ информацией о месте
 
 class SightDetails extends StatelessWidget {
-// Sight sight;
+  final Sight sight;
 
-  SightDetails({Key? key, required Sight sight}) : super(key: key);
-
-// ! я не очень понимаю TODO: потом поменять на переменную
+  SightDetails({Key? key, required this.sight}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // return
-
     return Scaffold(
       // appBar: AppBar(title: const Text('')),
       body: Container(
@@ -28,7 +24,7 @@ class SightDetails extends StatelessWidget {
           children: [
             Stack(children: [
               Image.network(
-                'https://guruturizma.ru/wp-content/uploads/2017/10/GUM.jpg',
+                sight.url,
                 fit: BoxFit.fitWidth,
               ),
               Positioned(
@@ -50,12 +46,11 @@ class SightDetails extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Пряности и радости",
+                    sight.name,
                     style: const TextStyle(
                       fontSize: 20.0,
                       color: Colors.black87,
                       fontWeight: FontWeight.bold,
-                      // ! откуда берётся подчеркивание (если убрать эту строку)
                       decoration: TextDecoration.none,
                     ),
                   ),
@@ -69,7 +64,7 @@ class SightDetails extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "Ресторан",
+                        sight.type,
                         style: const TextStyle(
                           fontSize: 12.0,
                           color: Colors.black87,
@@ -85,7 +80,7 @@ class SightDetails extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "закрыто до 09:00",
+                        "ПОМЕНЯТЬ закрыто до 09:00",
                         style: const TextStyle(
                           fontSize: 12.0,
                           color: Colors.black45,
@@ -104,11 +99,11 @@ class SightDetails extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "ГУМ (аббревиатура от «Государственный универсальный магазин», до 1921 года — Верхние торговые ряды) — крупный торговый комплекс (универсальный магазин) в центре Москвы, который занимает местность Китай-города и выходит главным фасадом на Красную площадь. Позиционирует себя как главный универсальный магазин страны и целый торговый квартал.",
+                      sight.details,
                       style: const TextStyle(
                         fontSize: 12.0,
-                        color: Colors.black45,
-                        fontWeight: FontWeight.bold,
+                        color: Colors.black54,
+                        // fontWeight: FontWeight.bold,
                         decoration: TextDecoration.none,
                       ),
                     ),
