@@ -6,31 +6,26 @@ import '../../mocks.dart';
 
 import '/ui/res/constants.dart';
 
-class ListOfCardsWidget extends StatelessWidget {
-  const ListOfCardsWidget({Key? key}) : super(key: key);
+// ! Это не работает
 
-  @override
-  Widget build(BuildContext context) {
-// ! Кино посмотрел.  У меня не получается.
-// ! Вот это не работает когда я пытаюсь cardList показать внутри Column
-    // List<Widget> cardList = [];
-    // for (var i = 0; i < mocks.length; i++) {
-    //   cardList.add(SightCard(cardNumber: i));
-    // }
+// class ListOfCardsWidget extends StatelessWidget {
+//   const ListOfCardsWidget({Key? key}) : super(key: key);
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: const <Widget>[
-        SightCard(cardNumber: 0),
-        SightCard(cardNumber: 1),
-        SightCard(cardNumber: 2),
-        SightCard(cardNumber: 3),
-        SightCard(cardNumber: 4),
-        SightCard(cardNumber: 5),
-      ],
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+// List<Widget> cardList = [];
+// for (var i = 0; i < mocks.length; i++) {
+//   cardList.add(SightCard(cardNumber: i));
+// }
+
+//     return Column(
+//       mainAxisAlignment: MainAxisAlignment.start,
+//       children: const <Widget>[
+//          cardList,
+//       ],
+//     );
+//   }
+// }
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
@@ -46,34 +41,65 @@ class _SightListScreenState extends State<SightListScreen> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        toolbarHeight: 150,
-        // backgroundColor: Colors.green,
-        elevation: 0.0,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   toolbarHeight: 150,
+      //   // backgroundColor: Colors.green,
+      //   elevation: 0.0,
 
-        title: Text(
-          AppStrings.appTitle,
-          style: AppTypography.textAppTitleStyle,
+      //   title: Text(
+      //     AppStrings.appTitle,
+      //     style: AppTypography.textAppTitleStyle,
+      //   ),
+      // ),
+
+      // ! Без preferredSize всё нормально работало, а теперь - нет.
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(150),
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          // toolbarHeight: 150,
+          // backgroundColor: Colors.green,
+          elevation: 0.0,
+          title: Text(
+            AppStrings.appTitle,
+            style: AppTypography.textAppTitleStyle,
+          ),
         ),
       ),
+
       body: Center(
         child: SingleChildScrollView(
-          child: ListOfCardsWidget(),
-          // child: Column(
-          //   mainAxisAlignment: MainAxisAlignment.start,
-          //   children: const <Widget>[
-          //     // SightCard(cardNumber: 0),
-          //     // SightCard(cardNumber: 1),
-          //     // SightCard(cardNumber: 2),
-          //     // SightCard(cardNumber: 3),
-          //     // SightCard(cardNumber: 4),
-          //     // SightCard(cardNumber: 5),
-
-          //   ],
-          // ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const <Widget>[
+              SightCard(cardNumber: 0),
+              SightCard(cardNumber: 1),
+              SightCard(cardNumber: 2),
+              SightCard(cardNumber: 3),
+              SightCard(cardNumber: 4),
+              // SightCard(cardNumber: 5),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+
+
+    // return Scaffold(
+    //       appBar: PreferredSize( //wrap with PreferredSize
+    //             preferredSize: Size.fromHeight(20), //height of appbar
+    //             child: AppBar(
+    //               title:Text("AppBar Height"), //appbar title
+    //               backgroundColor: Colors.redAccent //appbar background color
+    //             )
+    //       ),
+    //       body: Container(
+    //         alignment:Alignment.topCenter,
+    //         padding: EdgeInsets.all(35),
+    //          child: Text("AppBar Height")
+    //       )
+    //   );

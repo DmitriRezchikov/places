@@ -36,6 +36,17 @@ class SightCard extends StatelessWidget {
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      // Container(
+                      //   // width: 500,
+                      //   // height: 70,
+                      //   child: AspectRatio(
+                      //     aspectRatio: 3 / 2,
+                      //     child: Image.network(
+                      //       mocks[cardNumber].url,
+                      //       fit: BoxFit.fill,
+                      //     ),
+                      //   ),
+                      // ),
                       Positioned(
                         top: 10,
                         left: 20,
