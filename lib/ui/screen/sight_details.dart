@@ -12,7 +12,7 @@ import 'package:places/ui/res/constants.dart';
 class SightDetails extends StatelessWidget {
   final Sight sight;
 
-  SightDetails({Key? key, required this.sight}) : super(key: key);
+  const SightDetails({Key? key, required this.sight}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
