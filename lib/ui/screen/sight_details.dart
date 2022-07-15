@@ -4,9 +4,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:places/domain/sight.dart';
-import '../../mocks.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/res/constants.dart';
 
-import '/ui/res/constants.dart';
 // карточка с ПОДРОБНОЙ информацией о месте
 
 class SightDetails extends StatelessWidget {

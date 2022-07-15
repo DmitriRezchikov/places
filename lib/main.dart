@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // карточка с ПОДРОБНОЙ информацией о месте
       // home: SightDetails(sight: mocks[4]),
-      home: SightListScreen(),
+      // списко карточек
+      home: const SightListScreen(),
     );
   }
 }

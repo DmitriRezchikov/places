@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:places/domain/sight.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/res/constants.dart';
 import 'package:places/ui/screen/sight_card.dart';
-import '../../mocks.dart';
-
-import '/ui/res/constants.dart';
 
 // ! Это не работает
 
@@ -72,13 +70,13 @@ class _SightListScreenState extends State<SightListScreen> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[
-              SightCard(cardNumber: 0),
-              SightCard(cardNumber: 1),
-              SightCard(cardNumber: 2),
-              SightCard(cardNumber: 3),
-              SightCard(cardNumber: 4),
-              // SightCard(cardNumber: 5),
+            children: <Widget>[
+              SightCard(sight: mocks[0]),
+              SightCard(sight: mocks[1]),
+              SightCard(sight: mocks[2]),
+              SightCard(sight: mocks[3]),
+              SightCard(sight: mocks[4]),
+              SightCard(sight: mocks[5]),
             ],
           ),
         ),
@@ -87,6 +85,9 @@ class _SightListScreenState extends State<SightListScreen> {
   }
 }
 
+
+
+// SightDetails(sight: mocks[4]),
 
 
     // return Scaffold(
