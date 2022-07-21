@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/mocks.dart';
-import 'package:places/ui/res/constants.dart';
 import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/ui/res/app_strings.dart';
+import 'package:places/ui/res/app_typography.dart';
 
 class ListOfCardsWidget extends StatelessWidget {
   const ListOfCardsWidget({Key? key}) : super(key: key);

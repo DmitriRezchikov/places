@@ -4,8 +4,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:places/mocks.dart';
-import 'package:places/ui/res/constants.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/ui/res/app_assets.dart';
 
 // карточка с КРАТКОЙ информацией о месте
 
