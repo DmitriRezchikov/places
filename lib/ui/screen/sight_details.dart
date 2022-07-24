@@ -22,9 +22,21 @@ class SightDetails extends StatelessWidget {
         child: Column(
           children: [
             Stack(children: [
-              Image.network(
-                sight.url,
-                fit: BoxFit.fitWidth,
+              SizedBox(
+                height: 300,
+                child: Image.network(
+                  sight.url,
+                  fit: BoxFit.fitWidth,
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      return child;
+                    } else {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  },
+                ),
               ),
               Positioned(
                 top: 20,

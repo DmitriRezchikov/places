@@ -19,7 +19,6 @@ class ListOfCardsWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ...cardList,
-        // Text('some test text'),
       ],
     );
   }
@@ -41,20 +40,6 @@ class _SightListScreenState extends State<SightListScreen> {
       resizeToAvoidBottomInset: false,
 
       appBar: _AppBarWidget(),
-
-      // appBar: PreferredSize(
-      //   preferredSize: Size.fromHeight(150),
-      //   child: AppBar(
-      //     backgroundColor: Colors.transparent,
-      //     // toolbarHeight: 150,
-      //     // backgroundColor: Colors.green,
-      //     elevation: 0.0,
-      //     title: Text(
-      //       AppStrings.appTitle,
-      //       style: AppTypography.textAppTitleStyle,
-      //     ),
-      //   ),
-      // ),
 
       body: Center(
         child: SingleChildScrollView(

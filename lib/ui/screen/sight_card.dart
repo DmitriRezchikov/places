@@ -38,6 +38,15 @@ class SightCard extends StatelessWidget {
                           child: Image.network(
                             sight.url,
                             fit: BoxFit.fitWidth,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) {
+                                return child;
+                              } else {
+                                return Center(
+                                  child: CircularProgressIndicator(),
+                                );
+                              }
+                            },
                           ),
                         ),
                         Positioned(
